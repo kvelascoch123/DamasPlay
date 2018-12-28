@@ -1,0 +1,120 @@
+<aside class="sidebar pos-absolute z-2"
+       data-role="sidebar"
+       data-toggle="#sidebar-toggle-4"
+       id="sb4"
+       data-shift=".shifted-content-2"
+       data-static-shift=".shifted-content-2"
+       data-static="md">
+    <div class="sidebar-header" data-image="images/sb-bg-1.jpg">
+        <div class="avatar">
+            <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
+        </div>
+        <span class="title fg-black">Nombre del Usuario</span>
+        <span class="subtitle fg-black"> Puntuación: #</span>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a><span class="mif-gamepad fg-green icon"></span>Jugar</a></li>
+        <li><a><span class="mif-books fg-orange icon"></span>Aprender</a></li>
+        <li><a><span class="mif-chat fg-blue icon"></span>Chat</a></li>
+        <li class="divider"></li>
+        <li><a><span class="mif-user  icon"></span>Ver</a></li>
+        <div> <button type="button" class="btn btn-link btn-lg btn-block" (click)="open(content, 'nuevo')">Registrarse</button>
+        </div>
+        <div><button type="button" class="btn btn-primary btn-lg btn-block">Iniciar seción</button>
+
+        </div>
+    </ul>
+    
+    
+</aside>
+
+
+<div class="shifted-content-2 h-100 p-ab" >
+    <div class="appbar pos-absolute bg-blue  z-1" data-role="appbar" >
+        &nbsp;&nbsp;
+          <h3 class="h3">DamasPlay</h3> 
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="mif-gamepad fg-green mif-4x icon"></span>
+          
+          <div style="margin-left:auto; margin-right: 40px" >
+            
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mif-user  icon"> User</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="#">Cerrar seción</a>
+              </div>
+        </div>
+
+          
+    </div>
+
+
+</div>
+
+
+<!--modal del noton registrarse-->
+
+<ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4>Se parte de nuestra comunidad DamasPlay</h4>
+          <button type="button" class="close" (click)="d('Cross click')">
+              <span>&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+                    
+                      <table class="table table-striped table-dark">
+                            <tbody>
+                                <tr>
+                                  
+                                    <td colspan="4" style="align:center" > Ingresa los datos solicitados.</td>
+                             
+                                </tr>
+                              <tr>
+                                <td>Nombre</td>
+                                <td><input type="text" class="form-control mb-2 mr-sm-2" id="email">
+                                </td>
+                                <td>Apellido</td>
+                                <td> <input type="text" class="form-control mb-2 mr-sm-2" id="pwd"></td>
+
+                              </tr>
+                              <tr>
+                                <td>Contraseña</td>
+                                <td><input type="password" class="form-control mb-2 mr-sm-2" id="pwd"></td>
+                                <td>Nombre de perfil</td>
+                                <td><input type="text" class="form-control mb-2 mr-sm-2" id="pwd"></td>
+
+                              </tr>
+
+                              <tr>
+                                  <td>Email</td>
+                                  <td><input type="email" class="form-control mb-2 mr-sm-2" id="pwd"></td>
+                                  <td>Edad</td>
+                                  <td><input type="number" class="form-control mb-2 mr-sm-2" id="pwd"></td>
+
+                              </tr>
+
+
+                              <tr>
+                                  <td><button  class="btn btn-primary mb-2">Guardar</button></td>
+                                  <td><button  class="btn btn-secondary mb-2">Cancelar</button></td>
+
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                          
+
+
+
+                      
+                        
+          </div>
+     
+              
+    </ng-template>
+    
